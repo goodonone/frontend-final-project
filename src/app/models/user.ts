@@ -1,5 +1,5 @@
 export class User {
-  userId?:string;
+  userId?:number;
   Email?: string;
   Password?: string;
   firstName?: string;
@@ -10,7 +10,7 @@ export class User {
   memberSince?: string; 
   // = Date.toLocaleString();
 
-  constructor(userid?:string, email?: string, password?: string, firstname?: string, lastname?: string, city?: string,
+  constructor(userid?:number, email?: string, password?: string, firstname?: string, lastname?: string, city?: string,
     state?: string, membersince?: string, username?: string) {
     this.userId = userid;
     this.Email = email;

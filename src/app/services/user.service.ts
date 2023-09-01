@@ -12,18 +12,23 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  signUp(newUser: User){
+  signUp(newUser: User) {
     return this.http.post(`${this.baseURL}/register`, newUser);
   }
 
-  login(username: string, password: string){
+  login(username: string, password: string) {
     let queryParams = new HttpParams();
     queryParams = queryParams.append('email', username);
     queryParams = queryParams.append('password', password);
 
-    return this.http.get(`${this.baseURL}/login`,  { params: queryParams, responseType: 'text' })
+    return this.http.get(`${this.baseURL}/login`, { params: queryParams, responseType: 'text' })
       .pipe(tap((response: any) => {
         localStorage.setItem('myCoffeeToken', response);
       }));
   }
+
+  getUser(userId: number) {
+    return this.http.get<User>(this.baseURL + "/" + userId);
+  }
+
 }
