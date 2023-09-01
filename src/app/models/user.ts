@@ -1,15 +1,24 @@
 export class User {
-    email?: string;
-    password?: string;
-    firstName?: string;
-    lastName?: string;
-    
-  
-    constructor(email?: string, password?: string, firstName?: string, lastName?: string) {
-      this.email = email;
-      this.password = password;
-      this.firstName = firstName;
-      this.lastName = lastName;
-    }
+  Email?: string;
+  Password?: string;
+  firstName?: string;
+  lastName?: string;
+  userName?: string;
+  City?: string;
+  State?: string;
+  memberSince?: string = Date.toLocaleString();
+
+  constructor(email?: string, password?: string, firstname?: string, lastname?: string, city?: string,
+    state?: string, membersince?: string) {
+
+    this.Email = email;
+    this.Password = password;
+    this.firstName = firstname;
+    this.lastName = lastname;
+    this.City = city;
+    this.State = state;
+    this.memberSince = membersince;
+
+  }
 
 }
