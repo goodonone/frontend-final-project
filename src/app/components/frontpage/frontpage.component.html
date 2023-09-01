@@ -1,1 +1,19 @@
-<p>frontpage works!</p>
+<h1>All Posts</h1>
+<!-- <a [routerLink]="['new']">Create New Post</a> -->
+
+    <form (ngSubmit)="onSubmit()">
+    <h1>Post</h1>
+    <span>Coffee Name</span>
+    <input [ngModelOptions]="{standalone: true}" placeholder="New Chirp" [(ngModel)]="newPost.Chirp"><br><br>
+    <button>
+        Chirp!
+    </button>     
+</form>
+
+
+<div *ngIf="postList">
+    <div *ngFor="let post of postList">
+        <h2>{{post.Chirp}} - ${{post.ChirpDate}}</h2>
+        <hr>
+    </div>
+</div>
