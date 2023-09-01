@@ -9,6 +9,7 @@ import { FrontpageComponent } from './components/frontpage/frontpage.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 import { EditPostComponent } from './components/edit-post/edit-post.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,11 +19,12 @@ import { EditPostComponent } from './components/edit-post/edit-post.component';
     FrontpageComponent,
     ProfileComponent,
     EditProfileComponent,
-    EditPostComponent
+    EditPostComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
