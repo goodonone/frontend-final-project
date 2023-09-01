@@ -11,6 +11,7 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
 import { EditPostComponent } from './components/edit-post/edit-post.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

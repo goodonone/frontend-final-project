@@ -37,16 +37,16 @@ export class ProfileComponent {
 
 }
 
-onSubmit() {
-  this.coffeeService.updateCoffee(this.currentCoffee).subscribe(edittedProduct => {
-    window.alert("Updated Coffee Successfully");
-    this.router.navigate(["coffee"]);
-  }, error => {
-    console.log('Error: ', error)
-    if (error.status === 401) {
-      this.router.navigate(['signin']);
-      // this.router.navigate(["coffee"]);
-    }
+// onSubmit() {
+//   this.coffeeService.updateCoffee(this.currentCoffee).subscribe(edittedProduct => {
+//     window.alert("Updated Coffee Successfully");
+//     this.router.navigate(["coffee"]);
+//   }, error => {
+//     console.log('Error: ', error)
+//     if (error.status === 401) {
+//       this.router.navigate(['signin']);
+//       // this.router.navigate(["coffee"]);
+//     }
 
     // Put in method to submit posts from profile
     // Put in method to edit posts
