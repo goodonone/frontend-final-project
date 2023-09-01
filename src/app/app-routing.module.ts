@@ -5,6 +5,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { FrontpageComponent } from './components/frontpage/frontpage.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 import { EditPostComponent } from './components/edit-post/edit-post.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 const routes: Routes = [{ 
   path: "",
@@ -20,8 +21,12 @@ const routes: Routes = [{
   component: SignUpComponent
 },
 {
-  path: "profile",
+  path: "home",
   component: FrontpageComponent
+},
+{
+  path: "profile",
+  component: ProfileComponent
 },
 {
   path: "edit-profile",
