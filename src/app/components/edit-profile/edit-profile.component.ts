@@ -11,10 +11,10 @@ import { User } from 'src/app/models/user';
   templateUrl: './edit-profile.component.html',
   styleUrls: ['./edit-profile.component.css']
 })
-export class EditProfileComponent {
+export class EditProfileComponent implements OnInit{
 
   currentUser: User = new User()
-  currentId: String = "";
+  currentId: string = "";
   userId: number = 0;
 
   constructor(private userService: UserService, private actRoute: ActivatedRoute, private router: Router) { }
@@ -37,4 +37,5 @@ export class EditProfileComponent {
       // this.router.navigate(["coffee"]);
       }
 
-}
+    })
+  }}

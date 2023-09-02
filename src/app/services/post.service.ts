@@ -15,11 +15,13 @@ export class PostService {
     return this.http.get<Post[]>(this.baseURL);
   }
 
+  // Check
   getAllPostsByUserId(userId: number) {
     return this.http.get<Post[]>(this.baseURL + "/" + userId + "/" + `posts`);
+    // (this.baseURL + "/" + userId, Posts.userId);
   }
 
-  getPost(postId: string) {
+  getPost(postId?: number) {
     return this.http.get<Post>(this.baseURL + "/" + postId);
   }
 
@@ -30,11 +32,18 @@ export class PostService {
   return this.http.post(this.baseURL, newPost, { headers: reqHeaders });
   }
 
+   // Check
   editPost(updatedPost: Post) {
-
+    let reqHeaders = {
+      Authorization: `Bearer ${localStorage.getItem(this.tokenKey)}`
+  }
+  return this.http.put(this.baseURL, updatedPost, { headers: reqHeaders });
   }
 
-  deletePost(postId: string) {
-
+  deletePost(postId?: number) {
+    let reqHeaders = {
+      Authorization: `Bearer ${localStorage.getItem(this.tokenKey)}`
+  }
+  return this.http.delete<any>(this.baseURL+ "/" + postId, { headers: reqHeaders });
   }
 }

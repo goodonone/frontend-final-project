@@ -1,1 +1,19 @@
+<h1>Your Chirps</h1>
+<a [routerLink]="['edit-Profile', userId]">Edit Profile</a>
+
+<form (ngSubmit)="onSubmit()">
+    <h1>Post</h1>
+    <span>New Post</span>
+    <input [ngModelOptions]="{standalone: true}" placeholder="New Chirp" [(ngModel)]="newPost.Chirp"><br><br>
+    <button>
+        Chirp!
+    </button>  
+
+<div *ngIf="postList">
+    <div *ngFor="let post of postList">
+        <p>{{post.Chirp}} - ${{post.ChirpDate}}</p>
+        <button name="postId" [routerLink]="['edit-post', post.PostId]">Edit</button> &nbsp; <button (click)='onDelete(post.PostId)'>Delete</button>
+        <hr>
+    </div>
+</div>
 
