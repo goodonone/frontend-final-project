@@ -25,8 +25,13 @@
     display: inline-block;
 }
 
-.input {
-    margin-top: 5px;
+p{
+margin-bottom: 0;
+
+}
+
+.formInput {
+   margin-bottom: -20px;
 }
 
 .title {

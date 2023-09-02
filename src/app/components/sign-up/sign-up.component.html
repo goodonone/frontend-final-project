@@ -1,25 +1,31 @@
 <div class="container-fluid mat-card">
-    <form (ngSubmit)="signUp()">
-  <mat-card class="example-card">
-    <h1>REGISTER</h1>
-    <span>First Name:  </span>
-    <input placeholder="Enter First Name" type="text" name="firstName" [(ngModel)]="newUser.firstName"><br><br>
-    <span>Last Name:  </span>
-    <input placeholder="Enter Last Name" type="text" name="lastName" [(ngModel)]="newUser.lastName"><br><br>
-    <span>Email:  </span>
-    <input placeholder="Enter Email" type="text" name="email" [(ngModel)]="newUser.Email"><br><br>
-    <span>User Name:  </span>
-    <input placeholder="Enter Password" type="text" name="userName" [(ngModel)]="newUser.userName"><br><br>
-    <span>Password:  </span>
-    <input placeholder="Enter Password" type="text" name="Password" [(ngModel)]="newUser.Password"><br><br>
-    <span>Photo Link:  </span>
-    <input placeholder="Enter Password" type="text" name="PhotoUrl" [(ngModel)]="newUser.photoUrl"><br><br>
-    <span>City:  </span>
-    <input placeholder="Enter Password" type="text" name="City" [(ngModel)]="newUser.City"><br><br>
-    <span>State:  </span>
-    <input placeholder="Enter Password" type="text" name="State" [(ngModel)]="newUser.State"><br><br>
-    <button>
-      Sign Up
-    </button>
-  </mat-card>
-</form>
+  <form class="example-card" (ngSubmit)="signUp()">
+      <mat-card-header>
+        <!-- <div mat-card-avatar class="example-header-image"></div> -->
+        <mat-card-title class="title">Join The Club 😉</mat-card-title>
+        <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+      </mat-card-header>
+      <mat-card-content>
+        <mat-form-field appearance="outline">
+        <span>First Name: </span>
+        <input placeholder="Enter your first name" type="text" name="firstName" class="input" [(ngModel)]="newUser.firstName"><br><br>
+        <span>Last Name: </span>
+        <input matInput placeholder="Enter your last name" type="text" name="lastName" class="input" [(ngModel)]="newUser.lastName"><br><br>
+        <span>Email: </span>
+        <input matInput placeholder="Enter your email" type="text" name="email" class="input"[(ngModel)]="newUser.Email"><br><br>
+        <span>User Name: </span>
+        <input matInput placeholder="Enter a username" type="text" name="userName" class="input" [(ngModel)]="newUser.userName"><br><br>
+        <span>Password: </span>
+        <input matInput placeholder="Enter a password" type="text" name="Password" class="input" [(ngModel)]="newUser.Password"><br><br>
+        <span>Photo Link: </span>
+        <input matInput placeholder="Enter Password" type="text" name="PhotoUrl" class="input" [(ngModel)]="newUser.photoUrl"><br><br>
+        <span>City: </span>
+        <input matInput placeholder="Link to your picture" type="text" name="City" class="input" [(ngModel)]="newUser.City"><br><br>
+        <span>State: </span>
+        <input matInput placeholder="Enter Password" type="text" name="State" class="input" [(ngModel)]="newUser.State"><br><br>
+        <div class="example-button-row">
+          <button mat-button type="submit">Sign Up 🙌</button>
+        </div>
+        </mat-form-field>
+      </mat-card-content>
+    </form>

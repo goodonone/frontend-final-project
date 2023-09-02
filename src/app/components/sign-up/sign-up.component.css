@@ -1,0 +1,34 @@
+.example-card,
+.mat-card {
+    display: flex;
+    justify-content: space-around;
+    max-width: 400px;
+    align-items: center;
+    padding: 50px;
+    /* margin-top: 70px; */
+}
+
+.example-header-image,
+.mat-card-sm-image {
+    background-image: url('src/assets/bird-chirping-flat-by-Vexels.png');
+    background-size: 55px;
+    zoom: 200%;
+}
+
+.example-button-row button,
+.example-button-row a {
+    margin-top: 5px;
+    margin-right: 8px;
+}
+
+.example-disabled {
+    display: inline-block;
+}
+
+.input {
+    margin-top: -10px;
+}
+
+.title {
+    margin-top: 30px;
+}
