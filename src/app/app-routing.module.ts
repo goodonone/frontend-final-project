@@ -25,11 +25,11 @@ const routes: Routes = [{
   component: FrontpageComponent
 },
 {
-  path: "profile",
+  path: "profile/:UserId",
   component: ProfileComponent
 },
 {
-  path: "edit-profile",
+  path: "edit-profile/:UserId",
   component: EditProfileComponent
 },
 {

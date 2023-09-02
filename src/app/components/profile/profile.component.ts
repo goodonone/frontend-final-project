@@ -51,4 +51,4 @@ export class ProfileComponent {
     // Put in method to submit posts from profile
     // Put in method to edit posts
 
-  }
+  

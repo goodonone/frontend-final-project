@@ -9,6 +9,7 @@ import { tap } from 'rxjs';
 export class UserService {
 
   baseURL: string = "https://localhost:7025/api/auth";
+  tokenKey: string = "myPostToken";
 
   constructor(private http: HttpClient) { }
 
@@ -29,6 +30,13 @@ export class UserService {
 
   getUser(userId: number) {
     return this.http.get<User>(this.baseURL + "/" + userId);
+  }
+
+  updateUser(edittedUser: User) {
+    let reqHeaders1 = {
+      Authorization: `Bearer ${localStorage.getItem(this.tokenKey)}`
+    }
+    return this.http.put<User>(this.baseURL + "/" + edittedUser.userId, edittedUser, { headers: reqHeaders1 }) ;
   }
 
 }

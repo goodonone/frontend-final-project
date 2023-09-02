@@ -1,1 +1,22 @@
-<p>edit-profile works!</p>
+<form (ngSubmit)="editProfile()">
+    <h1>REGISTER</h1>
+    <span>First Name:  </span>
+    <input placeholder="Enter First Name" type="text" name="firstName" [(ngModel)]="currentUser.firstName"><br><br>
+    <span>Last Name:  </span>
+    <input placeholder="Enter Last Name" type="text" name="lastName" [(ngModel)]="currentUser.lastName"><br><br>
+    <span>Email:  </span>
+    <input placeholder="Enter Email" type="text" name="email" [(ngModel)]="currentUser.Email"><br><br>
+    <span>User Name:  </span>
+    <input placeholder="Enter Password" type="text" name="userName" [(ngModel)]="currentUser.userName"><br><br>
+    <span>Password:  </span>
+    <input placeholder="Enter Password" type="text" name="Password" [(ngModel)]="currentUser.Password"><br><br>
+    <span>Photo Link:  </span>
+    <input placeholder="Enter Password" type="text" name="PhotoUrl" [(ngModel)]="currentUser.photoUrl"><br><br>
+    <span>City:  </span>
+    <input placeholder="Enter Password" type="text" name="City" [(ngModel)]="currentUser.City"><br><br>
+    <span>State:  </span>
+    <input placeholder="Enter Password" type="text" name="State" [(ngModel)]="currentUser.State"><br><br>
+    <button>
+      Sign Up
+    </button>
+</form>
