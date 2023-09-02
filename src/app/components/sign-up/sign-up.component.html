@@ -1,4 +1,6 @@
-<form (ngSubmit)="signUp()">
+<div class="container-fluid mat-card">
+    <form (ngSubmit)="signUp()">
+  <mat-card class="example-card">
     <h1>REGISTER</h1>
     <span>First Name:  </span>
     <input placeholder="Enter First Name" type="text" name="firstName" [(ngModel)]="newUser.firstName"><br><br>
@@ -19,4 +21,5 @@
     <button>
       Sign Up
     </button>
+  </mat-card>
 </form>

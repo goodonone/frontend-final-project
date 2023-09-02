@@ -12,6 +12,9 @@ import { EditPostComponent } from './components/edit-post/edit-post.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
