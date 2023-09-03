@@ -2,10 +2,15 @@
 .mat-card {
     display: flex;
     justify-content: space-around;
-    max-width: 400px;
+    max-width: 800px;
     align-items: center;
     padding: 50px;
     /* margin-top: 70px; */
+}
+
+.firstLastName{
+    /* display: flex; */
+    display:inline;
 }
 
 .example-header-image,
@@ -19,6 +24,9 @@
 .example-button-row a {
     margin-top: 5px;
     margin-right: 8px;
+    margin:auto;
+    display: flex;
+    justify-content: space-around;
 }
 
 .example-disabled {
@@ -30,5 +38,19 @@
 }
 
 .title {
-    margin-top: 30px;
+    /* margin-top: 30px; */
 }
+
+.formInput {
+    margin-top: 10px;
+ }
+
+ .inline{
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .spacing{
+    display: flex;
+    justify-content: space-around;
+ }

@@ -1,31 +1,87 @@
 <div class="container-fluid mat-card">
-  <form class="example-card" (ngSubmit)="signUp()">
+  <form (ngSubmit)="signUp()">
+    <mat-card class="example-card">
       <mat-card-header>
-        <!-- <div mat-card-avatar class="example-header-image"></div> -->
-        <mat-card-title class="title">Join The Club 😉</mat-card-title>
-        <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+        <mat-card-title class="title">"Join The Club" 😉</mat-card-title>
       </mat-card-header>
       <mat-card-content>
-        <mat-form-field appearance="outline">
-        <span>First Name: </span>
-        <input placeholder="Enter your first name" type="text" name="firstName" class="input" [(ngModel)]="newUser.firstName"><br><br>
-        <span>Last Name: </span>
-        <input matInput placeholder="Enter your last name" type="text" name="lastName" class="input" [(ngModel)]="newUser.lastName"><br><br>
-        <span>Email: </span>
-        <input matInput placeholder="Enter your email" type="text" name="email" class="input"[(ngModel)]="newUser.Email"><br><br>
-        <span>User Name: </span>
-        <input matInput placeholder="Enter a username" type="text" name="userName" class="input" [(ngModel)]="newUser.userName"><br><br>
-        <span>Password: </span>
-        <input matInput placeholder="Enter a password" type="text" name="Password" class="input" [(ngModel)]="newUser.Password"><br><br>
-        <span>Photo Link: </span>
-        <input matInput placeholder="Enter Password" type="text" name="PhotoUrl" class="input" [(ngModel)]="newUser.photoUrl"><br><br>
-        <span>City: </span>
-        <input matInput placeholder="Link to your picture" type="text" name="City" class="input" [(ngModel)]="newUser.City"><br><br>
-        <span>State: </span>
-        <input matInput placeholder="Enter Password" type="text" name="State" class="input" [(ngModel)]="newUser.State"><br><br>
-        <div class="example-button-row">
+        <div class="container-fluid inline">
+          <p>
+            <mat-form-field class="formInput" appearance="outline">
+              <mat-label>First Name: </mat-label>
+              <input matInput placeholder="Enter your first name" type="text" name="firstName" class="input"
+                appearance="outline" [(ngModel)]="newUser.firstName">
+            </mat-form-field>
+          </p>
+          &nbsp;
+          <p>
+            <mat-form-field class="formInput" appearance="outline">
+              <mat-label>Last Name: </mat-label>
+              <input matInput placeholder="Enter your last name" type="text" name="lastName" class="input"
+                appearance="outline" [(ngModel)]="newUser.lastName">
+            </mat-form-field>
+          </p>
+        </div>
+        <div class="container-fluid inline">
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Email: </mat-label>
+            <input matInput placeholder="Enter your email" type="text" name="email" class="input" appearance="outline"
+              [(ngModel)]="newUser.Email">
+          </mat-form-field>
+        </p>
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>User Name: </mat-label>
+              <input matInput placeholder="Enter a username" type="text" name="userName" class="input"
+                appearance="outline" [(ngModel)]="newUser.userName">
+            </mat-form-field>
+          </p>
+        </div>
+        <div class="container-fluid inline">
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Password: </mat-label>
+              <input matInput placeholder="Enter a password" type="text" name="Password" class="input"
+                appearance="outline" [(ngModel)]="newUser.Password">
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Profile Picture Url: </mat-label>
+              <input matInput placeholder="Enter Password" type="text" name="PhotoUrl" class="input"
+                appearance="outline" [(ngModel)]="newUser.photoUrl">
+            </mat-form-field>
+          </p>
+        </div>
+          <div class="container-fluid inline">
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>City: </mat-label>
+              <input matInput placeholder="Link to your picture" type="text" name="City" class="input"
+                appearance="outline" [(ngModel)]="newUser.City">
+            </mat-form-field>
+          </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>State: </mat-label>
+            <input matInput placeholder="Enter Password" type="text" name="State" class="input" appearance="outline"
+              [(ngModel)]="newUser.State">
+          </mat-form-field>
+        </p>
+      </div>
+      <div class="container-fluid inline spacing">
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Zipcode </mat-label>
+            <input matInput placeholder="Zipcode" type="text" name="zipcode" class="input" appearance="outline"
+              [(ngModel)]="newUser.Zipcode">
+          </mat-form-field>
+        </p>
+      </div>
+        <div class="container-fluid example-button-row">
           <button mat-button type="submit">Sign Up 🙌</button>
         </div>
-        </mat-form-field>
       </mat-card-content>
-    </form>
+    </mat-card>
+  </form>

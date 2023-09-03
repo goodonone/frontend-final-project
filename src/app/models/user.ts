@@ -9,10 +9,11 @@ export class User {
   State?: string;
   memberSince?: string; 
   photoUrl?: string;
+  Zipcode?: number;
   // = Date.toLocaleString();
 
   constructor(userid?:number, email?: string, password?: string, firstname?: string, lastname?: string, city?: string,
-    state?: string, membersince?: string, username?: string, photoUrl?: string) {
+    state?: string, membersince?: string, username?: string, photoUrl?: string, zipcode?: number) {
     this.userId = userid;
     this.Email = email;
     this.Password = password;
@@ -23,6 +24,7 @@ export class User {
     this.memberSince = membersince;
     this.userName = username;
     this.photoUrl = photoUrl;
+    this.Zipcode = zipcode;
   }
 
 }

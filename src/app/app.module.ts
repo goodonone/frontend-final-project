@@ -12,10 +12,13 @@ import { EditPostComponent } from './components/edit-post/edit-post.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatCardModule} from '@angular/material/card';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatButtonModule} from '@angular/material/button';
-import {MatInputModule} from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+
+
 
 @NgModule({
   declarations: [
@@ -26,6 +29,7 @@ import {MatInputModule} from '@angular/material/input';
     ProfileComponent,
     EditProfileComponent,
     EditPostComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -36,8 +40,9 @@ import {MatInputModule} from '@angular/material/input';
     MatCardModule,
     MatFormFieldModule,
     MatButtonModule,
-   MatInputModule
-
+    MatInputModule,
+    MatIconModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
