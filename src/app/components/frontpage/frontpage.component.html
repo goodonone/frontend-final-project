@@ -1,19 +1,24 @@
-<h1>All Posts</h1>
-<!-- <a [routerLink]="['new']">Create New Post</a> -->
+<div class="container-fluid heading">
+    <h1>Chirping Happens Here!</h1>
+</div>
 
+<!-- <a [routerLink]="['new']">Create New Post</a> -->
+<div class="container-fluid post">
     <form (ngSubmit)="onSubmit()">
-    <h1>Post</h1>
-    <span>New Post</span>
-    <input [ngModelOptions]="{standalone: true}" placeholder="New Chirp" [(ngModel)]="newPost.Chirp"><br><br>
-    <button>
-        Chirp!
-    </button>     
+    <h1>New Post</h1>
+    <textarea class="textField" matInput placeholder="Say what you need to say, here." [(ngModel)]="newPost.Chirp"></textarea>
+    
+    <div class="container-fluid example-button-row">
+        <button mat-button type="submit">Chirp!</button>
+      </div>
 </form>
+</div>
 
 
 <div *ngIf="postList">
     <div *ngFor="let post of postList">
-        <h2>{{post.Chirp}} - ${{post.ChirpDate}}</h2>
+        <h2>{{post.Chirp}} | ${{post.ChirpDate}}</h2>
         <hr>
-    </div>
 </div>
+
+

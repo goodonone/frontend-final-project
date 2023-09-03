@@ -2,13 +2,13 @@
   <form (ngSubmit)="signUp()">
     <mat-card class="example-card">
       <mat-card-header>
-        <mat-card-title class="title">"Join The Club" 😉</mat-card-title>
+        <mat-card-title class="title">REGISTER 🤝</mat-card-title>
       </mat-card-header>
       <mat-card-content>
         <div class="container-fluid inline">
           <p>
             <mat-form-field class="formInput" appearance="outline">
-              <mat-label>First Name: </mat-label>
+              <mat-label>First Name </mat-label>
               <input matInput placeholder="Enter your first name" type="text" name="firstName" class="input"
                 appearance="outline" [(ngModel)]="newUser.firstName">
             </mat-form-field>
@@ -16,7 +16,7 @@
           &nbsp;
           <p>
             <mat-form-field class="formInput" appearance="outline">
-              <mat-label>Last Name: </mat-label>
+              <mat-label>Last Name </mat-label>
               <input matInput placeholder="Enter your last name" type="text" name="lastName" class="input"
                 appearance="outline" [(ngModel)]="newUser.lastName">
             </mat-form-field>
@@ -25,14 +25,14 @@
         <div class="container-fluid inline">
         <p>
           <mat-form-field appearance="outline">
-            <mat-label>Email: </mat-label>
+            <mat-label>Email </mat-label>
             <input matInput placeholder="Enter your email" type="text" name="email" class="input" appearance="outline"
               [(ngModel)]="newUser.Email">
           </mat-form-field>
         </p>
           <p>
             <mat-form-field appearance="outline">
-              <mat-label>User Name: </mat-label>
+              <mat-label>User Name </mat-label>
               <input matInput placeholder="Enter a username" type="text" name="userName" class="input"
                 appearance="outline" [(ngModel)]="newUser.userName">
             </mat-form-field>
@@ -41,15 +41,15 @@
         <div class="container-fluid inline">
           <p>
             <mat-form-field appearance="outline">
-              <mat-label>Password: </mat-label>
+              <mat-label>Password </mat-label>
               <input matInput placeholder="Enter a password" type="text" name="Password" class="input"
-                appearance="outline" [(ngModel)]="newUser.Password">
+                appearance="outline"  matTooltip="Please use 8 characters or more for your password.  Try a mix of letters, numbers, and symbols." [(ngModel)]="newUser.Password">
             </mat-form-field>
           </p>
           <p>
             <mat-form-field appearance="outline">
-              <mat-label>Profile Picture Url: </mat-label>
-              <input matInput placeholder="Enter Password" type="text" name="PhotoUrl" class="input"
+              <mat-label>Profile Picture Url </mat-label>
+              <input matInput placeholder="Photo Url" type="text" name="PhotoUrl" class="input"
                 appearance="outline" [(ngModel)]="newUser.photoUrl">
             </mat-form-field>
           </p>
@@ -57,14 +57,14 @@
           <div class="container-fluid inline">
           <p>
             <mat-form-field appearance="outline">
-              <mat-label>City: </mat-label>
+              <mat-label>City </mat-label>
               <input matInput placeholder="Link to your picture" type="text" name="City" class="input"
                 appearance="outline" [(ngModel)]="newUser.City">
             </mat-form-field>
           </p>
         <p>
           <mat-form-field appearance="outline">
-            <mat-label>State: </mat-label>
+            <mat-label>State </mat-label>
             <input matInput placeholder="Enter Password" type="text" name="State" class="input" appearance="outline"
               [(ngModel)]="newUser.State">
           </mat-form-field>
@@ -80,7 +80,7 @@
         </p>
       </div>
         <div class="container-fluid example-button-row">
-          <button mat-button type="submit">Sign Up 🙌</button>
+          <button mat-button type="submit">SIGN UP</button>
         </div>
       </mat-card-content>
     </mat-card>
