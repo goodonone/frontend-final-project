@@ -10,6 +10,7 @@ export class User {
   memberSince?: string; 
   photoUrl?: string;
   Zipcode?: number;
+  static userId: any;
   // = Date.toLocaleString();
 
   constructor(userid?:number, email?: string, password?: string, firstname?: string, lastname?: string, city?: string,

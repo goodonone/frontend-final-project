@@ -17,7 +17,8 @@
 
 <div *ngIf="postList">
     <div *ngFor="let post of postList">
-        <h2>{{post.Chirp}} | ${{post.ChirpDate}}</h2>
+        <p>{{post.Chirp}}</p>
+        <p [routerLink]='["profile", post.UserId]'><strong>{{post.User}}</strong> | {{post.ChirpDate}}</p>
         <hr>
 </div>
 

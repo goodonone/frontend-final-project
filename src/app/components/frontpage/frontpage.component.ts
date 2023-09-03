@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./frontpage.component.css']
 })
 export class FrontpageComponent implements OnInit {
+  // [x: string]: any;
   postList: Post[] = [];
   newPost: Post = new Post();
 

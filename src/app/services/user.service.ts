@@ -19,12 +19,12 @@ export class UserService {
 
   login(username: string, password: string) {
     let queryParams = new HttpParams();
-    queryParams = queryParams.append('email', username);
+    queryParams = queryParams.append('username', username);
     queryParams = queryParams.append('password', password);
 
     return this.http.get(`${this.baseURL}/login`, { params: queryParams, responseType: 'text' })
       .pipe(tap((response: any) => {
-        localStorage.setItem('myCoffeeToken', response);
+        localStorage.setItem('myPostToken', response);
       }));
   }
 

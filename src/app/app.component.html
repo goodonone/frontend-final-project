@@ -24,6 +24,13 @@
         <li class="nav-item">
           <a class="nav-link active" aria-disabled="true" routerLink="/signin">Sign In</a>
         </li>
+
+        <div *ngIf="show">
+          <li class="nav-item">
+            <a class="nav-link active" aria-disabled="true" [routerLink]='["profile", user.userId]'>Hi! {{user.userId}}</a>
+          </li>
+        </div>
+        
         <!-- <li class="nav-item">
           <a class="nav-link active" aria-disabled="true" routerLink="/Profile">Hi!, </a>
         </li> -->
