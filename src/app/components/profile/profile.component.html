@@ -1,9 +1,9 @@
-<h1>{{currentUser.userName}}'s Profile</h1>
-
-
 <div class="container-fluid profileInfo">
     <div class="container-fluid profileText">
         <mat-card>
+            <mat-card-header>
+                <mat-card-title class="title">{{currentUser.userName}}'s Profile</mat-card-title>
+              </mat-card-header>
             <mat-card-content>
                 <p>{{currentUser.firstName}}</p><br>
                 <p>{{currentUser.lastName}}</p><br>
@@ -11,6 +11,7 @@
                 <p>{{currentUser.City}}</p><br>
                 <p>{{currentUser.State}}</p><br>
                 <p>{{currentUser.Zipcode}}</p><br>
+                <p>{{currentUser.memberSince}}</p><br>
             </mat-card-content>
         </mat-card>
     </div>
