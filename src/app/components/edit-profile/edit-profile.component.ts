@@ -29,7 +29,7 @@ export class EditProfileComponent implements OnInit{
   editProfile() {
     this.userService.updateUser(this.currentUser,).subscribe(edittedUser => {
       window.alert("Updated Coffee Successfully");
-      this.router.navigateByUrl('["profile", UserId]');
+      this.router.navigateByUrl('["profile", userId]');
     }, error => {
       console.log('Error: ', error)
       if (error.status === 401) {
