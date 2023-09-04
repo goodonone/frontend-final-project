@@ -15,7 +15,7 @@ export class EditProfileComponent implements OnInit{
 
   currentUser: User = new User()
   currentId: string = "";
-  userId: number = 0;
+  userId?: number = 0;
 
   constructor(private userService: UserService, private actRoute: ActivatedRoute, private router: Router) { }
 
@@ -23,13 +23,13 @@ export class EditProfileComponent implements OnInit{
     this.currentId = this.actRoute.snapshot.paramMap.get("userId") ?? "";
     this.userService.getUser(parseInt(this.currentId)).subscribe(foundUser => {
       this.currentUser = foundUser;
+      this.userId = this.currentUser.userId;
     });
   }
 
   editProfile() {
     this.userService.updateUser(this.currentUser,).subscribe(edittedUser => {
-      window.alert("Updated Coffee Successfully");
-      this.router.navigateByUrl('["profile", userId]');
+      this.router.navigate(['profile', this.userId]);
     }, error => {
       console.log('Error: ', error)
       if (error.status === 401) {

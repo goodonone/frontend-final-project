@@ -30,8 +30,6 @@ export class FrontpageComponent implements OnInit {
 
   onSubmit(){
     this.postService.createPost(this.newPost).subscribe(() => {
-      window.alert("Created Coffee Successfully");
-      // this.router.navigate(['coffee']);
     }, error => {
       console.log('Error: ', error)
       if (error.status === 401 || error.status === 403) {
