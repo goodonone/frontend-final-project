@@ -21,28 +21,30 @@
         <li class="nav-item">
           <a class="nav-link active" aria-disabled="true" routerLink="/signup">Sign Up</a>
         </li>
+
+        <!--
+          Displays Sign In when not logged in and Log out and Hi! <user's name> when logged in 
+        -->
+        
+        <div *ngIf="!show">
         <li class="nav-item">
           <a class="nav-link active" aria-disabled="true" routerLink="/signin">Sign In</a>
         </li>
-
+        </div>
         <div *ngIf="show">
+          <li class="nav-item">
+            <a class="nav-link active" aria-disabled="true" onclick="deleteKey()">Log Out</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link active" aria-disabled="true" [routerLink]='["profile", user.userId]'>Hi! {{user.userId}}</a>
           </li>
         </div>
         
-        <!-- <li class="nav-item">
-          <a class="nav-link active" aria-disabled="true" routerLink="/Profile">Hi!, </a>
-        </li> -->
+        
       </ul>
-      <!-- <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form> -->
+      
     </div>
   </div>
 </nav>
-
-<!-- **Make a way for a button to appear only if logged in** -->
 
 <router-outlet></router-outlet>

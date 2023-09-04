@@ -1,22 +1,76 @@
-<form (ngSubmit)="editProfile()">
-    <h1>REGISTER</h1>
-    <span>First Name:  </span>
-    <input placeholder="Enter First Name" type="text" name="firstName" [(ngModel)]="currentUser.firstName"><br><br>
-    <span>Last Name:  </span>
-    <input placeholder="Enter Last Name" type="text" name="lastName" [(ngModel)]="currentUser.lastName"><br><br>
-    <span>Email:  </span>
-    <input placeholder="Enter Email" type="text" name="email" [(ngModel)]="currentUser.Email"><br><br>
-    <span>User Name:  </span>
-    <input placeholder="Enter Password" type="text" name="userName" [(ngModel)]="currentUser.userName"><br><br>
-    <span>Password:  </span>
-    <input placeholder="Enter Password" type="text" name="Password" [(ngModel)]="currentUser.Password"><br><br>
-    <span>Photo Link:  </span>
-    <input placeholder="Enter Password" type="text" name="PhotoUrl" [(ngModel)]="currentUser.photoUrl"><br><br>
-    <span>City:  </span>
-    <input placeholder="Enter Password" type="text" name="City" [(ngModel)]="currentUser.City"><br><br>
-    <span>State:  </span>
-    <input placeholder="Enter Password" type="text" name="State" [(ngModel)]="currentUser.State"><br><br>
-    <button>
-      Update Profile
-    </button>
-</form>
+<div class="container-fluid mat-card">
+  <form (ngSubmit)="editProfile()">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title class="title">Edit Profile</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>First Name </mat-label>
+            <input matInput placeholder="Update First Name" type="text" name="firstName" class="input"
+              appearance="outline" [(ngModel)]="currentUser.firstName">
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Last Name </mat-label>
+            <input matInput placeholder="Update Last Name" type="text" name="firstName" class="input"
+              appearance="outline" [(ngModel)]="currentUser.lastName">
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Update Email" type="text" name="firstName" class="input" appearance="outline"
+              [(ngModel)]="currentUser.Email">
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>UserName </mat-label>
+            <input matInput placeholder="Update Username" type="text" name="firstName" class="input"
+              appearance="outline" [(ngModel)]="currentUser.firstName">
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Photo Link </mat-label>
+            <input matInput placeholder="Update Photolink" type="text" name="firstName" class="input"
+              appearance="outline" [(ngModel)]="currentUser.photoUrl">
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Password </mat-label>
+            <input matInput placeholder="Update Password" type="text" name="firstName" class="input"
+              appearance="outline" [(ngModel)]="currentUser.Password">
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>City</mat-label>
+            <input matInput placeholder="Update City" type="text" name="firstName" class="input" appearance="outline"
+              [(ngModel)]="currentUser.City">
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>State </mat-label>
+            <input matInput placeholder="Update State" type="text" name="firstName" class="input" appearance="outline"
+              [(ngModel)]="currentUser.State">
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Zipcode </mat-label>
+            <input matInput placeholder="Update Zipcode" type="text" name="firstName" class="input" appearance="outline"
+              [(ngModel)]="currentUser.Zipcode">
+          </mat-form-field>
+        </p>
+        <div class="container-fluid example-button-row">
+          <button mat-button type="submit" class="button">Update Profile</button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </form>

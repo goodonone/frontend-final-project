@@ -1,1 +1,13 @@
-<p>edit-post works!</p>
+<h1>Edit Chirp</h1>
+<div class="container-fluid post">
+    <form (ngSubmit)="onSubmit()">
+        <mat-card>
+            <mat-card-content>
+                <textarea class="textField" matInput [(ngModel)]="currentPost.Chirp"></textarea>
+                <div class="container-fluid example-button-row">
+                    <button mat-button type="submit">Update Chirp!</button>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </form>
+</div>

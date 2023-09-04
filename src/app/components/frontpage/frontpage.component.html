@@ -2,24 +2,31 @@
     <h1>Chirping Happens Here!</h1>
 </div>
 
-<!-- <a [routerLink]="['new']">Create New Post</a> -->
-<div class="container-fluid post">
-    <form (ngSubmit)="onSubmit()">
-    <h1>New Post</h1>
-    <textarea class="textField" matInput placeholder="Say what you need to say, here." [(ngModel)]="newPost.Chirp"></textarea>
-    
-    <div class="container-fluid example-button-row">
-        <button mat-button type="submit">Chirp!</button>
-      </div>
-</form>
+<!-- The Post Text Area to post and the post button will only be visible if the user is logged in -->
+
+<div *ngIf="displayPost">
+    <div class="container-fluid post">
+        <form (ngSubmit)="onSubmit()">
+            <h1>New Post</h1>
+            <textarea class="textField" matInput placeholder="Say what you need to say, here."
+                [(ngModel)]="newPost.Chirp"></textarea>
+
+            <div class="container-fluid example-button-row">
+                <button mat-button type="submit">Chirp!</button>
+            </div>
+        </form>
+    </div>
 </div>
 
+<!-- All Users Post/Chirps -->
 
 <div *ngIf="postList">
     <div *ngFor="let post of postList">
-        <p>{{post.Chirp}}</p>
-        <p [routerLink]='["profile", post.UserId]'><strong>{{post.User}}</strong> | {{post.ChirpDate}}</p>
-        <hr>
-</div>
-
-
+        <mat-card>
+            <mat-card-content>
+                <p>{{post.Chirp}}</p>
+                <p [routerLink]='["profile", post.UserId]'><strong>{{post.User}}</strong> | {{post.ChirpDate}}</p>
+                <hr>
+            </mat-card-content>
+          </mat-card>
+    </div>

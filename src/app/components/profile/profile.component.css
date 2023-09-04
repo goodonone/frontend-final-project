@@ -1,0 +1,24 @@
+.post{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.example-button-row button,
+.example-button-row a {
+    margin-top: 5px;
+    margin-right: 8px;
+    margin:auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.textField{
+width:500px;
+height:100px;
+}
+
+.profileInfo{
+    display: flex;
+    justify-content: space-evenly;
+}

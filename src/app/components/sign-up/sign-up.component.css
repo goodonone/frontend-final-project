@@ -5,11 +5,9 @@
     max-width: 800px;
     align-items: center;
     padding: 50px;
-    /* margin-top: 70px; */
 }
 
 .firstLastName{
-    /* display: flex; */
     display:inline;
 }
 
@@ -38,7 +36,6 @@
 }
 
 .title {
-    /* margin-top: 30px; */
     zoom:150%;
 }
 

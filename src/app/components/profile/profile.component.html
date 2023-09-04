@@ -1,19 +1,62 @@
-<h1>Your Chirps</h1>
-<a [routerLink]="['edit-Profile', userId]">Edit Profile</a>
+<h1>{{currentUser.userName}}'s Profile</h1>
 
-<form (ngSubmit)="onSubmit()">
-    <h1>Post</h1>
-    <span>New Post</span>
-    <input [ngModelOptions]="{standalone: true}" placeholder="New Chirp" [(ngModel)]="newPost.Chirp"><br><br>
-    <button>
-        Chirp!
-    </button>  
+
+<div class="container-fluid profileInfo">
+    <div class="container-fluid profileText">
+        <mat-card>
+            <mat-card-content>
+                <p>{{currentUser.firstName}}</p><br>
+                <p>{{currentUser.lastName}}</p><br>
+                <p>{{currentUser.Email}}</p><br>
+                <p>{{currentUser.City}}</p><br>
+                <p>{{currentUser.State}}</p><br>
+                <p>{{currentUser.Zipcode}}</p><br>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <mat-card>
+        <mat-card-content>
+            <div class="container-fluid profilePhoto">
+                <img name="profilePic" src={{currentUser.photoUrl}}>
+            </div>
+        </mat-card-content>
+    </mat-card>
+
+    <div *ngIf="display">
+        <a [routerLink]="['edit-Profile', userId]">Edit Profile</a>
+    </div>
+</div>
+
+
+<!-- Only User's Post/Chirps -->
+<!-- The Post Text Area will only be visible if the user is logged in  -->
+
+<h1>{{currentUser.userName}}'s Chirps</h1>
+
+<div *ngIf="display">
+    <div class="container-fluid post">
+        <form (ngSubmit)="onSubmit()">
+            <h1>Post</h1>
+            <span>New Post</span>
+            <textarea [ngModelOptions]="{standalone: true}" placeholder="Say what you need to say, here."
+                [(ngModel)]="newPost.Chirp"></textarea><br><br>
+            <div class="container-fluid example-button-row">
+                <button mat-button type="submit">Chirp!</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<!-- The Edit and Delete buttons will only be visible if the user is logged in -->
 
 <div *ngIf="postList">
     <div *ngFor="let post of postList">
         <p>{{post.Chirp}} - ${{post.ChirpDate}}</p>
-        <button name="postId" [routerLink]="['edit-post', post.PostId]">Edit</button> &nbsp; <button (click)='onDelete(post.PostId)'>Delete</button>
+        <div *ngIf="display">
+            <button name="postId" [routerLink]="['edit-post', post.PostId]">Edit</button> &nbsp; <button
+                (click)='onDelete(post.PostId)'>Delete</button>
+        </div>
         <hr>
     </div>
 </div>
-

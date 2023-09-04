@@ -4,7 +4,6 @@ import { Post } from 'src/app/models/post';
 import { PostService } from 'src/app/services/post.service';
 
 
-
 @Component({
   selector: 'app-edit-post',
   templateUrl: './edit-post.component.html',
@@ -27,13 +26,11 @@ export class EditPostComponent implements OnInit {
 
   onSubmit() {
     this.postService.editPost(this.currentPost).subscribe(edittedProduct => {
-      window.alert("Updated Coffee Successfully");
-      this.router.navigate(["coffee"]);
+      this.router.navigate(['profile', this.userId]);
     }, error => {
       console.log('Error: ', error)
       if (error.status === 401) {
         this.router.navigate(['signin']);
-        // this.router.navigate(["coffee"]);
       }
     })
 

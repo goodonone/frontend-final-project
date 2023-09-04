@@ -13,12 +13,19 @@ export class FrontpageComponent implements OnInit {
   postList: Post[] = [];
   newPost: Post = new Post();
 
+  displayPost: boolean = false;
+
   constructor(private postService: PostService, private router: Router) { }
 
   ngOnInit(): void {
     this.postService.getAllPosts().subscribe(post => {
       this.postList = post;
     });
+
+    if(localStorage['tokenKey']){
+      this.displayPost=true;
+    }
+
   }
 
   onSubmit(){

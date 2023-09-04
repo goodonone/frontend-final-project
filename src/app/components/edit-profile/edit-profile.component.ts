@@ -34,7 +34,6 @@ export class EditProfileComponent implements OnInit{
       console.log('Error: ', error)
       if (error.status === 401) {
         this.router.navigate(['signin']);
-      // this.router.navigate(["coffee"]);
       }
 
     })

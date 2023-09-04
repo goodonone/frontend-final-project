@@ -19,9 +19,12 @@ export class ProfileComponent implements OnInit {
   userId: number = 0;
 
   newPost: Post = new Post();
+  // user:
 
   currentPost: Post = new Post();
   currentPostId: string = "";
+
+  display: boolean = false;
 
   constructor(private postService: PostService, private actRoute: ActivatedRoute, private userService: UserService, private router: Router,) { }
 
@@ -32,9 +35,14 @@ export class ProfileComponent implements OnInit {
       this.currentUser = foundUser;
     });
 
+    if(localStorage['tokenKey']){
+      this.display=true;
+    }
+
     this.postService.getAllPostsByUserId(this.userId).subscribe(post => {
       this.postList = post;
     });
+
 
   }
 

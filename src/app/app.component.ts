@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from './services/user.service';
 import { User } from './models/user';
 import { Router } from '@angular/router';
-import { FrontpageComponent } from './components/frontpage/frontpage.component';
-// import { FrontpageComponent } from './components/frontpage/frontpage.component';
+
+
 
 @Component({
   selector: 'app-root',
@@ -19,15 +19,22 @@ export class AppComponent implements OnInit {
   show: boolean = false;
 
   constructor(private userService: UserService, private router: Router) { }
-  // private frontPage: FrontpageComponent;
+
+  // The methods that determine if Hi! <username> and if Sign In becomes Log Out
 
   ngOnInit(): void {
 
-    // if (this.userService.tokenKey != null) {
-    //   this.show = true;
-    //   this.frontpage['signIn'] = User;
-    //   this.user = User.userId;
-    // }
-
+    if (localStorage['tokenKey']) {
+      this.show = true;
+    }
   }
+
+  deleteKey() {
+    localStorage.removeItem('tokenKey');
+    location.reload();
+  }
+
+  // 
+
+
 }
